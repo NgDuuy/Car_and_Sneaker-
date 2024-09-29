@@ -1,5 +1,5 @@
 import React from "react";
-import lambo_logo from "./lambo.jpg"
+import lambo_logo from "../img/lambo.jpg"
 
 const Tieu_de = () => {
     return (
