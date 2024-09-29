@@ -1,0 +1,11 @@
+Model Information:
+* title:	Dodge Charger 2023
+* source:	https://sketchfab.com/3d-models/dodge-charger-2023-a483293021d34c7887234beaec9760ab
+* author:	3d cars (https://sketchfab.com/3d_livery_studios)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Dodge Charger 2023" (https://sketchfab.com/3d-models/dodge-charger-2023-a483293021d34c7887234beaec9760ab) by 3d cars (https://sketchfab.com/3d_livery_studios) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
