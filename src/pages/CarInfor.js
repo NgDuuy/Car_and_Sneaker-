@@ -44,7 +44,7 @@ export const CarInfo = () => {
         shadow-bias={-0.0001}
       />
       <Ground />
-       <FloatingGrid />
+      <FloatingGrid />
       <Boxes />
       <Rings />
 
