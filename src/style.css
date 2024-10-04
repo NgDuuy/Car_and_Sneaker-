@@ -7,3 +7,210 @@ canvas {
   margin: 0;
   overflow: hidden;
 }
+
+.home-button {
+  position: absolute;
+  top: 0px;
+  /* Adjust the vertical position */
+  left: 0.75vw;
+  /* Adjust the horizontal position */
+  z-index: 999;
+  color: white;
+  font-size: 24px;
+  /* Adjust font size */
+  background-color: transparent;
+  /* Transparent background */
+  padding: 5px 10px;
+  /* Adjust padding */
+  border: 2px solid white;
+  /* Optional: add border */
+  border-radius: 5px;
+  /* Optional: rounded corners */
+  text-decoration: none;
+  /* Remove underline from the link */
+}
+
+.home-button a {
+  color: white;
+  /* Link text color */
+  text-decoration: none;
+}
+
+.home-button:hover {
+  background-color: rgb(112, 111, 111);
+  /* Change background on hover */
+  color: black;
+  /* Change text color on hover */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+}
+
+/* Style cho ul chính */
+.Header {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #1c1d1c;
+  display: flex;
+  /* Hiển thị các mục theo hàng ngang */
+  justify-content: space-around;
+  /* Căn đều các mục */
+  color: white;
+  font-size: 18px;
+}
+
+.Header li {
+  position: relative;
+  /* Quan trọng để dropdown có vị trí tương đối */
+  display: inline-block;
+  /* padding: 10px 20px; */
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+/* Dropdown content ban đầu bị ẩn */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  /* min-width: 160px; */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Đổ bóng để tạo chiều sâu */
+  z-index: 1;
+}
+
+/* Style cho các mục trong dropdown */
+.dropdown-content li {
+  text-align: left;
+  color: black;
+  display: block;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.dropdown-content li:hover {
+  background-color: #f1f1f1;
+  /* Màu nền khi hover vào mục dropdown */
+}
+
+/* Hiển thị dropdown khi hover vào mục chính */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Thay đổi màu khi hover vào mục chính */
+.Header li:hover {
+  background-color: rgb(144, 140, 140);
+  /* Màu nền của mục chính khi hover */
+}
+
+.sideleft {
+  width: 10vw;
+  height: 100vh;
+  background-color: #1c1d1c;
+  text-align: center;
+}
+
+.logo {
+  width: 10vw;
+  /* Adjust the size as needed */
+  height: auto;
+  /* Maintains aspect ratio */
+  display: block;
+}
+
+
+.Car-showcase {
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+
+.Car-slide {
+  position: relative;
+  text-align: center;
+}
+
+.Car-background-text {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-size: 200px;
+  color: #1c1d1c;
+  font-weight: bold;
+  opacity: 0;
+  z-index: 1;
+  animation: slideDown 0.8s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes slideDown {
+  0% {
+    top: -100%;
+    opacity: 0;
+  }
+
+  100% {
+    top: 50%;
+    opacity: 0.2;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.car-slide.slick-active .car-background-text {
+  animation: slideDown 1s forwards;
+}
+
+.Car-image {
+  max-width: 80%;
+  margin: auto;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.Car-buttons {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  z-index: 3;
+}
+
+.btn {
+  background-color: #333;
+  color: #fff;
+  border-radius: 5%;
+  padding: 10px 20px;
+  border: 10px;
+  cursor: pointer;
+  font-size: 16px;
+
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+.Bodyhome {
+  display: flex;
+}
