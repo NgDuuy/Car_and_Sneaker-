@@ -3,11 +3,11 @@ import React from "react";
 import { CubeCamera, Environment, OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { EffectComposer, Bloom, ChromaticAberration } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
-import { Car } from "../components/car";
-import { Ground } from "../components/Ground";
-import { FloatingGrid } from "../components/FloatingGrid";
-import { Rings } from "../components/Rings";
-import { Boxes } from "../components/Boxes";
+import { Car } from "../components/CarHome/car";
+import { Ground } from "../components/CarHome/Ground";
+import { FloatingGrid } from "../components/CarHome/FloatingGrid";
+import { Rings } from "../components/CarHome/Rings";
+import { Boxes } from "../components/CarHome/Boxes";
 
 export const CarInfo = () => {
   return (

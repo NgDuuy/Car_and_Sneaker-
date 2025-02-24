@@ -11,36 +11,25 @@ canvas {
 .home-button {
   position: absolute;
   top: 0px;
-  /* Adjust the vertical position */
   left: 0.75vw;
-  /* Adjust the horizontal position */
   z-index: 999;
   color: white;
   font-size: 24px;
-  /* Adjust font size */
   background-color: transparent;
-  /* Transparent background */
   padding: 5px 10px;
-  /* Adjust padding */
   border: 2px solid white;
-  /* Optional: add border */
   border-radius: 5px;
-  /* Optional: rounded corners */
   text-decoration: none;
-  /* Remove underline from the link */
 }
 
 .home-button a {
   color: white;
-  /* Link text color */
   text-decoration: none;
 }
 
 .home-button:hover {
   background-color: rgb(112, 111, 111);
-  /* Change background on hover */
   color: black;
-  /* Change text color on hover */
 }
 
 ul {
@@ -55,34 +44,26 @@ li {
   position: relative;
 }
 
-/* Style cho ul chính */
 .Header {
   list-style-type: none;
   margin: 0;
   padding: 0;
   background-color: #1c1d1c;
   display: flex;
-  /* Hiển thị các mục theo hàng ngang */
   justify-content: space-around;
-  /* Căn đều các mục */
   color: white;
   font-size: 18px;
 }
 
 .Header li {
   position: relative;
-  /* Quan trọng để dropdown có vị trí tương đối */
   display: inline-block;
-  /* padding: 10px 20px; */
   color: whitesmoke;
   cursor: pointer;
 }
 
-/* Dropdown content ban đầu bị ẩn */
 .dropdown-content {
   display: none;
-  position: absolute;
-  /* min-width: 160px; */
   position: absolute;
   top: 100%;
   left: 0;
@@ -91,11 +72,9 @@ li {
   padding: 0;
   margin: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Đổ bóng để tạo chiều sâu */
   z-index: 1;
 }
 
-/* Style cho các mục trong dropdown */
 .dropdown-content li {
   text-align: left;
   color: black;
@@ -106,18 +85,14 @@ li {
 
 .dropdown-content li:hover {
   background-color: #f1f1f1;
-  /* Màu nền khi hover vào mục dropdown */
 }
 
-/* Hiển thị dropdown khi hover vào mục chính */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Thay đổi màu khi hover vào mục chính */
 .Header li:hover {
   background-color: rgb(144, 140, 140);
-  /* Màu nền của mục chính khi hover */
 }
 
 .sideleft {
@@ -129,12 +104,9 @@ li {
 
 .logo {
   width: 10vw;
-  /* Adjust the size as needed */
   height: auto;
-  /* Maintains aspect ratio */
   display: block;
 }
-
 
 .Car-showcase {
   position: relative;
@@ -147,18 +119,17 @@ li {
   text-align: center;
 }
 
+
 .Car-background-text {
   position: absolute;
   top: -100%;
-  left: 50%;
+  left: 150%;
   transform: translate(-50%, 0%);
   font-size: 200px;
   color: #1c1d1c;
   font-weight: bold;
   opacity: 0;
   z-index: 1;
-  animation: slideDown 0.8s forwards;
-  animation-delay: 0.3s;
 }
 
 @keyframes slideDown {
@@ -166,7 +137,6 @@ li {
     top: -100%;
     opacity: 0;
   }
-
   100% {
     top: 50%;
     opacity: 0.2;
@@ -174,15 +144,67 @@ li {
   }
 }
 
-.car-slide.slick-active .car-background-text {
-  animation: slideDown 1s forwards;
+@keyframes slideUpCar {
+  0% {
+    top: 100%;
+    opacity: 0;
+  }
+  100% {
+    top: 100%;
+    opacity: 1;
+    transform: translate(-50%, 0%);
+  }
+}
+
+/* .slick-track {
+  min-height: 600px;
+} */
+
+.Car_img {
+  position: relative;
+  width: 100%;
+  /* height: 500px; */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.anima1 {
+  animation: slideDown 2s forwards;
+}
+
+.anima2 {
+  animation: slideDown 2s forwards;
+}
+
+.anima3 {
+  animation: slideDown 2s forwards;
+}
+
+.anima1Car {
+  animation: slideUpCar 2s forwards;
+}
+
+.anima2Car {
+  animation: slideUpCar 2s forwards;
+}
+
+.anima3Car {
+  animation: slideUpCar 2s forwards;
 }
 
 .Car-image {
+  position: absolute;
+  /* top: 100%; */
+  left: 120%;
+  transform: translate(-50%, 50%);
   max-width: 80%;
   margin: auto;
+  margin-bottom: 10px;
   display: block;
-  position: relative;
+  position: relative; 
+  opacity: 0;
   z-index: 2;
 }
 
@@ -196,6 +218,12 @@ li {
   z-index: 3;
 }
 
+.Car-button {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 .btn {
   background-color: #333;
   color: #fff;
@@ -204,7 +232,6 @@ li {
   border: 10px;
   cursor: pointer;
   font-size: 16px;
-
 }
 
 .btn:hover {
@@ -213,4 +240,32 @@ li {
 
 .Bodyhome {
   display: flex;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(143, 141, 141, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #fff;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.close-button:hover {
+  background: #ddd;
 }
