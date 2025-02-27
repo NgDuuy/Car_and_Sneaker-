@@ -24,11 +24,11 @@ const CarModel = ({ modelPath, onClose }) => {
   // Điều chỉnh vị trí của mô hình để trục xoay nằm ở tâm
   let position;
   if (modelPath.includes('modified_lamborghini_urus.glb')) {
-    position = [-0.5, -0.6, 0];
+    position = [-1.3, -0.6, 0];
   } else if (modelPath.includes('huracan_falcontm.glb')) {
-    position = [0.7, -0.2, 0];
+    position = [0.15, -0.07, 0];
   } else if (modelPath.includes('lamborghini_aventador.glb')) {
-    position = [0.5, -0.6, 0];
+    position = [-0.2, -0.6, 0];
   } else {
     position = [0, 0, 0];
   }

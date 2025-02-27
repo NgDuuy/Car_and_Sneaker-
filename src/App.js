@@ -4,10 +4,12 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { CarInfo } from "./pages/CarInfor.js";  // Import CarInfo component
 import Home from "./pages/Home.js";
 import "./style.css";
+import ColorMenu from "./components/MenuPage/menu.js";
 
 function App() {
   return (
     <Router>
+      <ColorMenu />
       {/* Menu điều hướng */}
       <nav className="home-button">
         <Link to="/Homepage">High-End</Link>
