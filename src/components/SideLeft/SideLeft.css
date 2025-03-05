@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
 
 .sideleft {
-  z-index: 1000;
+  z-index: 10;
 }
 
 .overplay_sidebar {
@@ -38,15 +38,37 @@
   }
 }
 
+@keyframes fadeRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-120px);
+  }
+}
+
 #burger-toggle:checked ~ .menu {
   opacity: 1;
   animation: fadeLeft 0.3s ease-in-out forwards;
   visibility: visible;
 }
 
+#burger-toggle:not(:checked) ~ .menu {
+  opacity: 0;
+  animation: fadeRight 0.3s ease-in-out forwards;
+  visibility: hidden;
+}
+
 #burger-toggle:checked + .overplay_sidebar {
   opacity: 1;
   visibility: visible;
+}
+
+#burger-toggle:not(:checked) + .overplay_sidebar {
+  opacity: 0;
+  visibility: hidden;
 }
 
 #burger-toggle:checked ~ .menu .menu-nav-link span div,
