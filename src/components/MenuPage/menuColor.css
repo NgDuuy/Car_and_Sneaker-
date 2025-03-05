@@ -1,0 +1,141 @@
+@keyframes slideUps {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDowns {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.color-menu {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333333;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none; /* Ẩn menu ban đầu */
+  z-index: 1000;
+  transform: translateY(100%);
+  opacity: 0;
+  animation: slideUp 0.3s ease-in-out forwards;
+}
+
+.color-menu.open {
+  display: block; /* Hiển thị menu khi mở */
+  animation: slideUps 0.3s ease-in-out forwards;
+}
+
+.color-menu.close {
+  animation: slideDowns 0.3s ease-in-out forwards;
+}
+
+.color-menu h3 {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  color: rgb(255, 249, 249);
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.color-menu div {
+  margin-bottom: 15px;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.color-menu label {
+  margin-right: 10px;
+  font-size: 14px;
+  color: rgb(255, 249, 249);
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.color-menu input[type="color"],
+.color-menu input[type="number"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.color-menu input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.color-menu input[type="number"]::-webkit-outer-spin-button,
+.color-menu input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.color-menu-item {
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.menu-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover {
+  background-color: #555;
+}
+
+.close-button-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: rgb(255, 249, 249);
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.close-button-menu:hover {
+  color: #fdfdfd;
+}
